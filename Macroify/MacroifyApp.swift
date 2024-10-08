@@ -22,7 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct MacroifyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignUp()
         }
     }
 }
