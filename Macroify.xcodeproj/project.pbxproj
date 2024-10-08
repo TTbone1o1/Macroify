@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CDCD4F162CB5DC3D00D2E98F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDCD4F152CB5DC3D00D2E98F /* FirebaseAuth */; };
+		CDCD4F182CB5DC3D00D2E98F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CDCD4F172CB5DC3D00D2E98F /* FirebaseFirestore */; };
+		CDCD4F1A2CB5DC3D00D2E98F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CDCD4F192CB5DC3D00D2E98F /* FirebaseStorage */; };
+		CDCD4F1D2CB5DC6900D2E98F /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = CDCD4F1C2CB5DC6900D2E98F /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CDCD4EF82CB5DAE700D2E98F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -35,16 +42,6 @@
 			path = Macroify;
 			sourceTree = "<group>";
 		};
-		CDCD4EFA2CB5DAE700D2E98F /* MacroifyTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MacroifyTests;
-			sourceTree = "<group>";
-		};
-		CDCD4F042CB5DAE700D2E98F /* MacroifyUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MacroifyUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCD4F162CB5DC3D00D2E98F /* FirebaseAuth in Frameworks */,
+				CDCD4F182CB5DC3D00D2E98F /* FirebaseFirestore in Frameworks */,
+				CDCD4F1D2CB5DC6900D2E98F /* FirebaseCore in Frameworks */,
+				CDCD4F1A2CB5DC3D00D2E98F /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCD4EE92CB5DAE200D2E98F /* Macroify */,
-				CDCD4EFA2CB5DAE700D2E98F /* MacroifyTests */,
-				CDCD4F042CB5DAE700D2E98F /* MacroifyUITests */,
+				CDCD4F1B2CB5DC6900D2E98F /* Frameworks */,
 				CDCD4EE82CB5DAE200D2E98F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +90,13 @@
 				CDCD4F012CB5DAE700D2E98F /* MacroifyUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CDCD4F1B2CB5DC6900D2E98F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +119,10 @@
 			);
 			name = Macroify;
 			packageProductDependencies = (
+				CDCD4F152CB5DC3D00D2E98F /* FirebaseAuth */,
+				CDCD4F172CB5DC3D00D2E98F /* FirebaseFirestore */,
+				CDCD4F192CB5DC3D00D2E98F /* FirebaseStorage */,
+				CDCD4F1C2CB5DC6900D2E98F /* FirebaseCore */,
 			);
 			productName = Macroify;
 			productReference = CDCD4EE72CB5DAE200D2E98F /* Macroify.app */;
@@ -129,9 +140,6 @@
 			);
 			dependencies = (
 				CDCD4EF92CB5DAE700D2E98F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CDCD4EFA2CB5DAE700D2E98F /* MacroifyTests */,
 			);
 			name = MacroifyTests;
 			packageProductDependencies = (
@@ -152,9 +160,6 @@
 			);
 			dependencies = (
 				CDCD4F032CB5DAE700D2E98F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CDCD4F042CB5DAE700D2E98F /* MacroifyUITests */,
 			);
 			name = MacroifyUITests;
 			packageProductDependencies = (
@@ -195,6 +200,9 @@
 			);
 			mainGroup = CDCD4EDE2CB5DAE200D2E98F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CDCD4F142CB5DC3D00D2E98F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CDCD4EE82CB5DAE200D2E98F /* Products */;
 			projectDirPath = "";
@@ -558,6 +566,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDCD4F142CB5DC3D00D2E98F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDCD4F152CB5DC3D00D2E98F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDCD4F142CB5DC3D00D2E98F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CDCD4F172CB5DC3D00D2E98F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDCD4F142CB5DC3D00D2E98F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CDCD4F192CB5DC3D00D2E98F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDCD4F142CB5DC3D00D2E98F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		CDCD4F1C2CB5DC6900D2E98F /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDCD4F142CB5DC3D00D2E98F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDCD4EDF2CB5DAE200D2E98F /* Project object */;
 }
